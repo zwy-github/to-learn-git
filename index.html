@@ -9,13 +9,19 @@
 	<div>
 		<p>$ git -----检查是否安装</p>
 		<p>$ git init -----创建版本库</p>
-		<p>$ git add 文件名称 -----文件添加到仓库(添加多个 $ git add 文件1 文件2)</p>
+		<p>$ git add 文件名称 -----文件添加到仓库(添加多个 $ git add 文件1 文件2)(每次修改，如果不add到暂存区，那就不会加入到commit中)</p>
 		<p>$ git commit -m"你的备注" ----文件提交到仓库</p>
 		<p>$ git status ----仓库当前的状态是否被修改</p>
 		<p>$ git diff ----查看修改内容</p>
 		<p>$ git log --pretty=oneline ----显示从最近到最远的提交日志</p>
 		<p>$ git reset --hard HEAD^ ----回退到上一版本（当前版本HEAD，上一个版本就是HEAD^，上上一个版本就是HEAD^^）</p>
 		<p>$ git reset --hard commit_id ----到指定版本(git reflog查看命令历史，以便确定要回到未来的哪个版本)</p>
+		<p>$ git checkout -- 文件名 ----让这个文件回到最近一次git commit或git add时的状态</p>
+		
+	</div>
+
+	<div>
+		cat index.html ------打开index.html文件
 	</div>
 </body>
 </html>

@@ -39,6 +39,12 @@
 	<br>
 	<div>
 		<h3>远程仓库（基于Github，免费的是公开的）</h3>
+		<h3>在GitHub上，可以任意Fork开源仓库；
+
+			自己拥有Fork后的仓库的读写权限；
+
+			可以推送pull request给官方仓库来贡献代码。
+		</h3>
 		<p>根目录下 查找 .ssh文件（cd .ssh）,<span>如果有:</span>直接打开id_rsa.pub获取公钥（vim id_rsa.pub）</p>
 		<p><span>如果没有:</span>创建SSH Key: $ ssh-keygen -t rsa -C "youremail@example.com"</p>
 		<p>一直回车再获取公钥</p>
@@ -64,12 +70,24 @@
 		<p>$ git branch -d dev -----删除dev分支</p>
 		<p>$ git log --graph -----查看分支合并图(英文状态按 q 即可退出)</p>
 		<p>$ git stash -----保存工作(要修改其他分支的bug(切换到主分支，再创建一个新的用于修复bug的分支,修改后提交，再切换到主分支，再合并分支即可)，但暂时不想提交工作分支代码)</p>
-		<p>$ git stash pop -----恢复工作同时删除stash内容($ git stash apply恢复，$ git stash drop 删除stash)</p>
+		<p>$ git stash pop -----恢复工作同时删除stash内容（?并没有删除啊，不过在恢复的同时还将修改后的代码也一并移过来了）<br>
+			($ git stash apply恢复，$ git stash drop 删除stash)</p>
 		<p>$ git stash list -----查看stash内容</p>
+		<p>$ git remote -----查看远程库的信息($ git remote -v 更详细)</p>
+		<p>$ git push origin master -----所有本地提交推送到远程库（$ git push origin dev 该分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步）</p>
+		<p>$ git branch --set-upstream dev origin/dev -----建立本地dev和远程dev的链接</p>
+		<p>$ git pull -----提交dev前先拉取远程dev避免冲突，解决冲突后再push</p>
+		<h3>标签管理</h3>
+		<p>$ git tag v1.0 -----打一个新标签（$ git tag v0.9 6224937 给某一个commit打标签）</p>
+		<p>$ git tag -----查看所有标签</p>
+		<p>$ git show v0.9 -----查看标签信息</p>
+		<p>$ git push origin v1.0 -----推送某个标签到远程（$ git push origin --tags，一次性推送全部尚未推送到远程的本地标签）</p>
+		<p>$ git tag -d v1.0 -----删除本地标签</p>
+		<p>$ git push origin :refs/tags/v1.0 -----删除远程标签</p>
 	</div>
 	<div>
-开发啊开发啊
-再次开发再次开发
+		<h3>其他</h3>
 	</div>
+
 </body>
 </html>

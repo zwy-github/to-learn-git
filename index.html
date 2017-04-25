@@ -64,10 +64,11 @@
 		<p>$ git branch -d dev -----删除dev分支</p>
 		<p>$ git log --graph -----查看分支合并图(英文状态按 q 即可退出)</p>
 		<p>$ git stash -----保存工作(要修改其他分支的bug(切换到主分支，再创建一个新的用于修复bug的分支,修改后提交，再切换到主分支，再合并分支即可)，但暂时不想提交工作分支代码)</p>
-
+		<p>$ git stash pop -----恢复工作同时删除stash内容</p>
+		<p>$ git stash list -----查看stash内容</p>
 	</div>
 	<div>
-		这个是master的内容，居然在master上直接修改？？
+		现在在issue分支上，糟了，master上有bug，
 		cat index.html ------打开index.html文件
 		rm index2 ------删除文件
 
